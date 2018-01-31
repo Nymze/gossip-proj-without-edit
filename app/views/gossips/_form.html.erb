@@ -1,0 +1,26 @@
+
+
+<!--
+ <p> <%= label_tag 'anonymous_author', "Your new names my friend ?" %> </p>
+  <p> <%= text_field_tag 'anonymous_author' %> </p>
+
+  <p> <%= label_tag 'content', "What do you want to change ?" %> </p>
+  <p> <%= text_area_tag 'content' %> </p> -->
+
+<%= form_with(model: gossip, local: true) do |form| %>
+
+ <div class="field">
+    <%= form.label :anonymous_author %>
+    <%= form.text_field :anonymous_author, id: :gossip_anonymous_author %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_field :content, id: :gossip_content %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+
+  <% end %>
